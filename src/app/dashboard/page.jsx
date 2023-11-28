@@ -17,11 +17,11 @@ const Dashboard = async() => {
       <div>
         <AddUser/>
       </div>
-      {
+      {/* {
         data.map(user=>(
           <p key={user.emp_id}>{user.emp_fname}</p>
         ))
-      }
+      } */}
     </div>
   );
 };
