@@ -1,14 +1,25 @@
-import { NextResponse } from "next/server";
-import connect from "@/app/utils/db";
-import Post from "@/models/Post";
+const { default: pool } = require("@/app/utils/db");
+const { NextResponse, NextRequest } = require("next/server");
 
-export const GET = async (request) => {
-  // FETCH
+export const GET = async (req, res) => {
+  const connection = await pool.getConnection();
+  const [posts] = await connection.query("SELECT * FROM posts");
+  connection.release();
+  const data = JSON.stringify(posts);
+  return new NextResponse(data, { status: 200 });
+};
+
+export async function POST(req){
+  
   try {
-    await connect();
-    const posts = await Post.find();
-    return new NextResponse(posts, { status: 200 });
+    const data = await req.json();
+    console.log(data);
+    const connection = await pool.getConnection();
+    await connection.query("INSERT INTO posts (id, title) VALUES (?,?)",[id,data.title]);
+    id++;
+    connection.release();
   } catch (error) {
-    return new NextResponse("DB error", { status: 500 });
+    console.log(error.message)
+    return NextResponse.json(error.message, {status:500});
   }
 };
