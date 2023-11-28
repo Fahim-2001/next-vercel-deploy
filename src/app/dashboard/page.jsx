@@ -5,7 +5,7 @@ import AddUser from "../components/AddUser/AddUser";
 
 const Dashboard = async() => {
 
-  const data = await fetch('https://next-practise-delta.vercel.app/api/users', {cache:'no-store'}).then(res=>res.json())
+  const data = await fetch('https://http://localhost:3000//api/users', {cache:'no-store'}).then(res=>res.json())
 
   // console.log(data);
 
