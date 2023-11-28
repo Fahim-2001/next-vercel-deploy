@@ -27,7 +27,11 @@ const AddUser = () => {
         })
         router.refresh()
 
-        console.log(data)
+        if(req.ok){
+            alert("User Added");
+        }else{
+            alert("User registration failed")
+        }
     }
     
   return (
