@@ -18,7 +18,7 @@ const AddUser = () => {
             joiningDate: e.target.joining_date.value,
         }
 
-        // const req = await fetch('http://localhost:3000/api/users', {
+        // const req = await fetch('next-practise-delta.vercel.app/api/users', {
         //     method:"POST",
         //     headers:{
         //         'Content-Type':'application/json'

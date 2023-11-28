@@ -5,7 +5,7 @@ import AddUser from "../components/AddUser/AddUser";
 
 const Dashboard = async() => {
 
-  // const data = await fetch('http://localhost:3000/api/users', {cache:'no-store'}).then(res=>res.json())
+  const data = await fetch('next-practise-delta.vercel.app/api/users', {cache:'no-store'}).then(res=>res.json())
 
   // console.log(data);
 
@@ -17,11 +17,11 @@ const Dashboard = async() => {
       <div>
         <AddUser/>
       </div>
-      {/* {
+      {
         data.map(user=>(
           <p key={user.emp_id}>{user.emp_fname}</p>
         ))
-      } */}
+      }
     </div>
   );
 };

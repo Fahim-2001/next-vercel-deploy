@@ -1,8 +1,8 @@
 ###GET posts from db
-GET http://localhost:3000/api/posts
+GET next-practise-delta.vercel.app/api/posts
 
 ### POST a post.
-POST http://localhost:3000/api/posts
+POST next-practise-delta.vercel.app/api/posts
 Content-Type: application/json
 
 {
