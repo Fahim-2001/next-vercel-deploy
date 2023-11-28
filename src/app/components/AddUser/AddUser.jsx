@@ -18,13 +18,13 @@ const AddUser = () => {
             joiningDate: e.target.joining_date.value,
         }
 
-        const req = await fetch('http://localhost:3000/api/users', {
-            method:"POST",
-            headers:{
-                'Content-Type':'application/json'
-            },
-            body: JSON.stringify(data)
-        })
+        // const req = await fetch('http://localhost:3000/api/users', {
+        //     method:"POST",
+        //     headers:{
+        //         'Content-Type':'application/json'
+        //     },
+        //     body: JSON.stringify(data)
+        // })
         router.refresh()
 
         console.log(data)
