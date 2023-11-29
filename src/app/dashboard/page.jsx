@@ -3,7 +3,7 @@ import React from "react";
 import AddUser from "../../components/AddUser/AddUser";
 
 const Dashboard = async () => {
-  const data = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}api/users`, {
+  const data = await fetch(process.env.NEXT_PUBLIC_BASE_URL+"api/users", {
     cache: "no-store",
   }).then((res) => res.json());
 
