@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./category.module.css";
-import Button from "@/components/Button/button";
+import Button from "@/app/components/Button/button";
 import Image from "next/image";
 import { items } from "./data";
 import { notFound } from "next/navigation";

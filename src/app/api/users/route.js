@@ -10,10 +10,11 @@ export async function GET() {
   return NextResponse.json(user, { status: 201 });
 }
 
+// POST method to add new user or employee
 export async function POST(req) {
   try {
     const user = await req.json();
-    console.log(user)
+    // console.log(user)
     await connection.query(
       "INSERT INTO employee(emp_fname,emp_lname,emp_dept,emp_age,emp_salary,hiredate) VALUES(?,?,?,?,?,?)",
       [
