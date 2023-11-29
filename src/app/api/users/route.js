@@ -7,7 +7,6 @@ const connection = await pool.getConnection()
 export async function GET() {
   
   const [user] = await connection.query("SELECT * FROM employee");
-  connection.release();
   return NextResponse.json(user, { status: 201 });
 }
 
