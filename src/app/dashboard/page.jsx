@@ -5,7 +5,7 @@ import AddUser from "../components/AddUser/AddUser";
 
 const Dashboard = async() => {
 
-  const data = await fetch(`${process.env.NEXT_PUBLIC_URL}api/users`, {cache:'no-store'}).then(res=>res.json())
+  const data = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}api/users`, {cache:'no-store'}).then(res=>res.json())
 
   // console.log(data);
 

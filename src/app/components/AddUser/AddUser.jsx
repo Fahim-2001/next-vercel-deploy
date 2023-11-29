@@ -19,7 +19,7 @@ const AddUser = () => {
     };
 
     const req = await fetch(
-      `${process.env.NEXT_PUBLIC_URL}api/usersapi/users`,
+      `${process.env.NEXT_PUBLIC_BASE_URL}api/usersapi/users`,
       {
         method: "POST",
         headers: {
