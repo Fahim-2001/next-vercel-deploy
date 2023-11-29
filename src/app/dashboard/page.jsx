@@ -3,9 +3,9 @@ import React from "react";
 import AddUser from "../../components/AddUser/AddUser";
 
 const Dashboard = async () => {
-  // const data = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}api/users`, {
-  //   cache: "no-store",
-  // }).then((res) => res.json());
+  const data = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}api/users`, {
+    cache: "no-store",
+  }).then((res) => res.json());
 
   return (
     <div>
@@ -13,9 +13,9 @@ const Dashboard = async () => {
       <div>
         <AddUser />
       </div>
-      {/* {data.map((user) => (
+      {data.map((user) => (
         <p key={user.emp_id}>{user.emp_fname}</p>
-      ))} */}
+      ))}
     </div>
   );
 };
