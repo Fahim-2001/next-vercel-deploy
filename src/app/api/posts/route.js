@@ -1,4 +1,4 @@
-const { default: pool } = require("@/app/utils/db");
+const { default: pool } = require("@/utils/db");
 const { NextResponse, NextRequest } = require("next/server");
 
 export const GET = async (req, res) => {

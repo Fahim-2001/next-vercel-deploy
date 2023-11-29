@@ -7,6 +7,7 @@ const AddUser = () => {
   const router = useRouter();
 
   const handleSubmitUser = async (e) => {
+   try {
     e.preventDefault();
 
     const data = {
@@ -19,7 +20,7 @@ const AddUser = () => {
     };
 
     const req = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}api/usersapi/users`,
+      `${process.env.NEXT_PUBLIC_BASE_URL}api/users`,
       {
         method: "POST",
         headers: {
@@ -35,6 +36,9 @@ const AddUser = () => {
     } else {
       alert("User registration failed");
     }
+   } catch (error) {
+    console.log(error.message)
+   }
   };
 
   return (

@@ -1,6 +1,6 @@
 // "use client";
 import React from "react";
-import AddUser from "../components/AddUser/AddUser";
+import AddUser from "../../components/AddUser/AddUser";
 
 
 const Dashboard = async() => {

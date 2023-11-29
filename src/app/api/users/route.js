@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const { default: pool } = require("@/app/utils/db");
+const { default: pool } = require("../../../utils/db");
 
 const connection = await pool.getConnection();
 
@@ -13,7 +13,7 @@ export async function GET() {
 export async function POST(req) {
   try {
     const user = await req.json();
-
+    console.log(user)
     await connection.query(
       "INSERT INTO employee(emp_fname,emp_lname,emp_dept,emp_age,emp_salary,hiredate) VALUES(?,?,?,?,?,?)",
       [
