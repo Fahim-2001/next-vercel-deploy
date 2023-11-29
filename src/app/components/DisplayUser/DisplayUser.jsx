@@ -7,9 +7,9 @@ const DisplayUser = async () => {
     // console.log(data)
   return (
     <div>
-      {data.map((user) => (
+      {/* {data.map((user) => (
         <p key={user.emp_id}>{user.emp_fname}</p>
-      ))}
+      ))} */}
     </div>
   );
 };
